@@ -1,0 +1,74 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.stat-total {
+  background: var(--green-950);
+  border-color: var(--green-950);
+  color: #fff;
+}
+
+.stat-total .stat-label {
+  color: var(--green-200);
+}
+
+.stat-purchased {
+  background: var(--green-100);
+  border-color: var(--green-200);
+  color: var(--green-800);
+}
+
+.stat-purchased .stat-label {
+  color: var(--green-800);
+}
+
+.stat-remaining .stat-value {
+  color: var(--green-600);
+}
+
+@media (max-width: 560px) {
+  .stats {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}

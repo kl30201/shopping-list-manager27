@@ -1,0 +1,89 @@
+.item-form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.field input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--green-50);
+  transition: border-color var(--ease), background var(--ease), box-shadow var(--ease);
+}
+
+.field input::placeholder {
+  color: #93a99c;
+}
+
+.field input:hover {
+  border-color: var(--green-200);
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--green-600);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(47, 166, 115, 0.25);
+}
+
+.field input[aria-invalid='true'] {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.field-error {
+  font-size: 0.85rem;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 11px 18px;
+  font-weight: 700;
+  transition: background var(--ease), transform var(--ease), border-color var(--ease), box-shadow var(--ease);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  flex: 1;
+  background: var(--green-600);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--green-800);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--muted);
+}
+
+.btn-ghost:hover {
+  background: var(--green-50);
+  border-color: var(--green-200);
+  color: var(--ink);
+}

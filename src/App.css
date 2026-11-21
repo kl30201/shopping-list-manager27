@@ -1,0 +1,105 @@
+/* ---------- App layout ---------- */
+.app {
+  min-height: 100vh;
+}
+
+.app-header {
+  background: var(--green-950);
+  color: #fff;
+  padding: 22px 24px;
+}
+
+.brand {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--green-500);
+  color: var(--green-950);
+  flex-shrink: 0;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.brand p {
+  font-size: 0.9rem;
+  color: var(--green-200);
+}
+
+.app-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.side-panel {
+  display: grid;
+  gap: 28px;
+  position: sticky;
+  top: 24px;
+}
+
+.list-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .side-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-header {
+    padding: 18px 16px;
+  }
+
+  .app-main {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}

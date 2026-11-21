@@ -1,0 +1,121 @@
+.item-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  transition: border-color var(--ease), box-shadow var(--ease), background var(--ease);
+}
+
+.item-card:hover {
+  border-color: var(--green-200);
+  box-shadow: var(--shadow-md);
+}
+
+.item-card.is-editing {
+  border-color: var(--green-600);
+  background: var(--green-50);
+}
+
+.check-btn {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border: 2px solid var(--green-200);
+  border-radius: 50%;
+  background: #fff;
+  color: transparent;
+  transition: background var(--ease), border-color var(--ease), color var(--ease);
+}
+
+.check-btn:hover {
+  border-color: var(--green-600);
+}
+
+.item-card.is-purchased {
+  background: var(--green-50);
+}
+
+.is-purchased .check-btn {
+  background: var(--green-600);
+  border-color: var(--green-600);
+  color: #fff;
+}
+
+.item-body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+}
+
+.item-name {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+  transition: color var(--ease);
+}
+
+.item-status {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.is-purchased .item-name {
+  text-decoration: line-through;
+  color: #8aa092;
+}
+
+.item-qty {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-size: 0.88rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.is-purchased .item-qty {
+  opacity: 0.6;
+}
+
+.item-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--muted);
+  transition: background var(--ease), color var(--ease);
+}
+
+.icon-btn:hover {
+  background: var(--green-100);
+  color: var(--green-800);
+}
+
+.icon-btn-danger:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+@media (max-width: 560px) {
+  .item-card {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .item-qty {
+    padding: 3px 9px;
+  }
+}
